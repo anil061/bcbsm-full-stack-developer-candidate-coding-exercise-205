@@ -1,0 +1,15 @@
+<p>email works!</p>
+<form (ngSubmit)="sendEmail()">
+    <label for="fromEmail">From Email:</label>
+    <input type="email" id="fromEmail" [(ngModel)]="email.fromEmail" name="fromEmail" required>
+  
+    <label for="recipientEmail">Recipient Email:</label>
+    <input type="email" id="recipientEmail" [(ngModel)]="email.recipientEmail" name="recipientEmail" required>
+  
+    <label for="attachmentFileName">Attachment File Name:</label>
+    <input type="text" id="attachmentFileName" [(ngModel)]="email.attachmentFileName" name="attachmentFileName" required>
+  
+    <input type="file" (change)="onFileSelected($event)" id="attachmentFile" name="attachmentFile" required>
+  
+    <button type="submit">Send Email</button>
+  </form>
